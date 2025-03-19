@@ -1,4 +1,4 @@
-import Profile from "./components/profile/profile";
+import Profile from "./components/Profile/Profile";
 import "./App.css";
 
 const App = () => {
