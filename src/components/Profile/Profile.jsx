@@ -1,28 +1,27 @@
 import css from "./Profile.module.css";
-console.log(css);
 
-const Profile = ({ name, tag, location, img }) => {
+const Profile = ({ name, tag, location, image, stats }) => {
   return (
-    <div>
-      <div>
-        <img src={img} alt="User avatar" />
-        <p>{name}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
+    <div className={css.profileCard}>
+      <div className={css.wrapperInfo}>
+        <img src={image} alt="User avatar" />
+        <p className={css.profileName}>{name}</p>
+        <p className={css.profileTag}>@{tag}</p>
+        <p className={css.profileLocation}>{location}</p>
       </div>
 
-      <ul>
+      <ul className={css.profileList}>
         <li>
           <span>Followers</span>
-          <span>1000</span>
+          <span>{stats.followers}</span>
         </li>
         <li>
           <span>Views</span>
-          <span>2000</span>
+          <span>{stats.views}</span>
         </li>
         <li>
           <span>Likes</span>
-          <span>3000</span>
+          <span>{stats.views}</span>
         </li>
       </ul>
     </div>

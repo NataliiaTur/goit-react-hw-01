@@ -1,16 +1,25 @@
 import Profile from "./components/Profile/Profile";
+import FriendList from "./components/FriendList/FriendList";
 import "./App.css";
+import userData from "./userData.json";
+import friends from "./friends.json";
+import transactions from "./transactions.json";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 const App = () => {
   return (
     <div>
       <Profile
-        name="Petra Marica"
-        tag="@pmarica"
-        location="Salvador, Brasil"
-        image="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-        isOnline
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
       />
+
+      <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
