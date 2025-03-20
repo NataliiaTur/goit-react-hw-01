@@ -21,7 +21,7 @@ const Profile = ({ name, tag, location, image, stats }) => {
         </li>
         <li>
           <span>Likes</span>
-          <span>{stats.views}</span>
+          <span>{stats.likes}</span>
         </li>
       </ul>
     </div>
